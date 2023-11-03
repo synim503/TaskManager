@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="599.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: white; -fx-max-height: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableTasks" layoutX="332.0" prefHeight="600.0" prefWidth="763.0">
+         <columns>
+            <TableColumn fx:id="tableDescr" prefWidth="250.0" text="descr" />
+            <TableColumn fx:id="tableData" minWidth="0.0" prefWidth="150.0" text="data" />
+            <TableColumn fx:id="tableImportance" minWidth="8.0" prefWidth="150.0" text="importance" />
+            <TableColumn fx:id="tableStatus" minWidth="0.0" prefWidth="249.0" text="status" />
+         </columns>
+      </TableView>
+      <Button fx:id="buttonReset" layoutX="133.0" layoutY="452.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Сбросить" />
+      <Label layoutX="15.0" layoutY="327.0" text="Выбрать период" />
+      <DatePicker fx:id="datePeriodFrom" layoutX="23.0" layoutY="357.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="21.0" layoutY="14.0" text="Введите описание задачи" />
+      <TextArea fx:id="textAreaDescr" layoutX="24.0" layoutY="41.0" prefHeight="155.0" prefWidth="278.0" style="-fx-background-color: black;" />
+      <Label layoutX="21.0" layoutY="206.0" text="Укажите важность" />
+      <RadioButton fx:id="radioButtonImportanceLow" layoutX="35.0" layoutY="234.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="50.0" text="LOW">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioButtonGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioButtonImportanceHigh" layoutX="35.0" layoutY="285.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="50.0" text="HIGH" toggleGroup="$radioButtonGroup" />
+      <Button fx:id="buttonFindTask" layoutX="23.0" layoutY="452.0" mnemonicParsing="false" text="Найти задачу" />
+      <RadioButton fx:id="radioButtonImportanceUrgent" layoutX="35.0" layoutY="259.0" mnemonicParsing="false" text="URGENT" toggleGroup="$radioButtonGroup" />
+      <DatePicker fx:id="datePeriodTo" layoutX="23.0" layoutY="399.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

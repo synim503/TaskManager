@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="313.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="800.0" style="-fx-background-color: #bac0db; -fx-max-height: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="320.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="22.0" layoutY="13.0" text="Введите описание задачи" />
+            <TextArea fx:id="textAreaDescr" layoutX="22.0" layoutY="37.0" prefHeight="157.0" prefWidth="462.0" style="-fx-background-color: black;" />
+            <Label layoutX="507.0" layoutY="13.0" text="Укажите важность" />
+            <RadioButton fx:id="radioButtonImportanceLow" layoutX="526.0" layoutY="107.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="50.0" text="LOW">
+               <toggleGroup>
+                  <ToggleGroup fx:id="radioButtonGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioButtonImportanceHigh" layoutX="526.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="50.0" text="HIGH" toggleGroup="$radioButtonGroup" />
+            <Button fx:id="buttonAddTask" layoutX="22.0" layoutY="225.0" mnemonicParsing="false" text="Добавить задачу" />
+            <DatePicker fx:id="dateDueDate" layoutX="603.0" layoutY="181.0" prefHeight="17.0" prefWidth="171.0" showWeekNumbers="true" />
+            <Label layoutX="526.0" layoutY="152.0" text="Сделать до" />
+            <RadioButton fx:id="radioButtonImportanceUrgent" layoutX="525.0" layoutY="43.0" mnemonicParsing="false" text="URGENT" toggleGroup="$radioButtonGroup" />
+            <TextField fx:id="textHours" layoutX="523.0" layoutY="181.0" minHeight="25.0" minWidth="25.0" prefHeight="25.0" prefWidth="30.0" />
+            <TextField fx:id="textMinutes" layoutX="563.0" layoutY="181.0" minHeight="25.0" minWidth="25.0" prefHeight="25.0" prefWidth="30.0" />
+            <Label layoutX="556.0" layoutY="174.0" text=":">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

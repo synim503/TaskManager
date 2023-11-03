@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Главная</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/task.css}" rel="stylesheet" />
+    <link th:href="@{/css/edit-task.css}" rel="stylesheet" />
+</head>
+    <body>
+        <div class="wraper">
+        <div class="notification">
+            <div class="title_notify_bar">Уведомления</div>
+            <div class="notify_button"><img class="close-notification" th:src="@{file/notify-icon.png}" alt="close"></div>
+        </div>
+        <div class="header_one_line"></div>
+        <div class="header_two_line">
+            <div class="header_title">
+                Task Manager
+            </div>
+        </div>
+        <div class="find-div">
+                <div class="prod_descr">
+                    <label>
+                        <input type="text" name="descr" class="find-text-descr"></input>
+                    </label>
+                    <div class="label_descr">
+                        Введите описание
+                    </div>
+                </div>
+                <div class="prod_duedate">
+                    <input type="datetime-local" name="duedate" class="date-from" id>
+                    <div class="label_descr">
+                        Дата исполнения от
+                    </div>
+                </div>
+                <div class="prod_duedate">
+                    <input type="datetime-local" name="duedate" class="date-to" id>
+                    <div class="label_descr">
+                        Дата исполнения до
+                    </div>
+                </div>
+
+                <div class="prod_checkbox">
+                    <div class="radio-toolbar-find" style="margin-bottom: 5px">
+                        <input type="radio" id="radio_find1" name="importance" value="" checked>
+                        <label for="radio_find1" class="label_radi_text">ALL</label>
+
+                        <input type="radio" id="radio_find2" name="importance" value="URGENT" >
+                        <label for="radio_find2" class="label_radi_text">URGENT</label>
+
+                        <input type="radio" id="radio_find3" name="importance" value="HIGH">
+                        <label for="radio_find3" class="label_radio_text">HIGH</label>
+
+                        <input type="radio" id="radio_find4" name="importance" value="LOW">
+                        <label for="radio_find4" class="label_radi_text">LOW</label>
+
+                    </div>
+                    <div class="label_descr">
+                        Выберете важность
+                    </div>
+                </div>
+                <button class="find-button-popup" type="submit" onclick="findTaskSort()">Найти</button>
+            </div>
+        <div class="header_one_line"></div>
+        <div class="content"></div>
+        <div class="popup_bg_edit">
+            <div class="popup_edit">
+                <img class="close-popup-edit" th:src="@{file/close.png}" alt="close">
+                <div class="popup_content">
+                    <div class="prod_descr">
+                        <label>
+                            <textarea class="descr_lable_edit"></textarea>
+                        </label>
+                        <div class="label_edit">
+                            Описание
+                        </div>
+                    </div>
+
+                    <div class="prod_checkbox">
+                        <div class="radio-toolbar-edit" style="margin-bottom: 5px">
+                            <input type="radio" id="radio-edit1" name="radio_edit" value="URGENT" checked>
+                            <label for="radio-edit1" class="label_radi_text">URGENT</label>
+
+                            <input type="radio" id="radio-edit2" name="radio_edit" value="HIGH">
+                            <label for="radio-edit2" class="label_radi_text">HIGH</label>
+
+                            <input type="radio" id="radio-edit3" name="radio_edit" value="LOW">
+                            <label for="radio-edit3" class="label_radi_text">LOW</label>
+                        </div>
+                        <div class="label_edit">
+                            Важность
+                        </div>
+                    </div>
+
+                    <div class="prod_duedate">
+                        <input type="datetime-local" name="duedate" class="duedate_edit">
+                        <div class="label_edit">
+                            Дата исполнения
+                        </div>
+                    </div>
+                    <button class="edit-button-popup" type="submit">Сохранить изменения</button>
+                </div>
+            </div>
+        </div>
+        <div class="add-button"><div>+</div></div>
+        <div class="popup_bg">
+            <div class="popup">
+                <img class="close-popup" th:src="@{file/close.png}" alt="close">
+                <div class="popup_content">
+                    <div class="prod_descr">
+                        <label>
+                            <textarea name="descr" class="descr_lable"></textarea>
+                        </label>
+                        <div class="label_descr">
+                            Введите описание
+                        </div>
+
+                    </div>
+
+                    <div class="prod_checkbox">
+                        <div class="radio-toolbar" style="margin-bottom: 5px">
+                            <input type="radio" id="radio1" name="radios" value="URGENT" checked>
+                            <label for="radio1" class="label_radi_text">URGENT</label>
+
+                            <input type="radio" id="radio2" name="radios" value="HIGH">
+                            <label for="radio2" class="label_radio_text">HIGH</label>
+
+                            <input type="radio" id="radio3" name="radios" value="LOW">
+                            <label for="radio3" class="label_radi_text">LOW</label>
+                        </div>
+                        <div class="label_descr">
+                            Выберете важность
+                        </div>
+                    </div>
+
+                    <div class="prod_duedate">
+                        <input type="datetime-local" name="duedate" class="duedate">
+                        <div class="label_descr">
+                            Дата исполнения
+                        </div>
+                    </div>
+
+                </label>
+                <button class="add-button-popup" type="submit">Добавить задачу</button>
+            </div>
+        </div>
+            <!--wind edit task-->
+
+
+
+        <footer class="footer">
+            <p>© 2022 Task Manager</p>
+        </footer>
+        <script type="text/javascript" th:src="@{/js/script.js}"></script>
+        <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
+
+    </body>
+</html>
