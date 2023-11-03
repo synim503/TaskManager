@@ -92,7 +92,7 @@ function addTask(descr, duedate, importance){
         redirect: 'follow'
     };
 
-    fetch("http://localhost:9999/api/v1/tasks/add", requestOptions)
+    fetch("/api/v1/tasks/add", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -166,7 +166,7 @@ function getTaskQuery(descr, dateFrom, dateTo, importance) {
           redirect: 'follow'
       };
 
-      fetch(`http://localhost:9999/api/v1/tasks/?descr=${descr}&dueFrom=${dateFrom}&dueTo=${dateTo}&importance=${importance}`, requestOptions)
+      fetch(`/api/v1/tasks/?descr=${descr}&dueFrom=${dateFrom}&dueTo=${dateTo}&importance=${importance}`, requestOptions)
           .then(response => response.json())
           .then(result => makeAllTask(result))
           .catch(error => console.log('error', error));
@@ -236,14 +236,14 @@ function getTaskQuery(descr, dateFrom, dateTo, importance) {
           redirect: 'follow'
       };
 
-      fetch("http://localhost:9999/api/v1/tasks/update", requestOptions)
+      fetch("/api/v1/tasks/update", requestOptions)
           .then(response => response.text())
           .then(result => console.log(result))
           .catch(error => console.log('error', error));
   }
 
 
-const evtSource = new EventSource("http://localhost:9999/api/v1/tasks/notifications", { withCredentials: true } );
+const evtSource = new EventSource("/api/v1/tasks/notifications", { withCredentials: true } );
 
 evtSource.onmessage = function(event) {
     let obj = JSON.parse(event.data);
@@ -286,7 +286,7 @@ function completed(event){
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:9999/api/v1/tasks/complete?id=${id}`, requestOptions)
+    fetch(`/api/v1/tasks/complete?id=${id}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -302,7 +302,7 @@ function canceled(event){
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:9999/api/v1/tasks/cancel?id=${id}`, requestOptions)
+    fetch(`/api/v1/tasks/cancel?id=${id}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -324,7 +324,7 @@ function postpone(event){
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:9999/api/v1/tasks/postpone?id=${id}&period=${period}`, requestOptions)
+    fetch(`/api/v1/tasks/postpone?id=${id}&period=${period}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
