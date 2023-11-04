@@ -15,29 +15,29 @@
 1. Десктопный клиента.
    <ul>
       <li>Поиск и редактирование уже добавленных задач
-<img src="img/1. find task.PNG." alt="альтернативный текст">
+<img src="img/1. find task.PNG" alt="find task">
 </li>
       <li>Поиск задач по строке
-<img src="img/2. find task filter str.png" alt="альтернативный текст">
+<img src="img/2. find task filter str.png" alt="find task filter str">
 </li>
       <li>Поиск по дате
-<img src="img/3. find task by date.png" alt="альтернативный текст">
+<img src="img/3. find task by date.png" alt="find task by date">
 </li>
       <li>Добавление новой задачи
-<img src="img/4. add task.PNG" alt="альтернативный текст">
+<img src="img/4. add task.PNG" alt="add task">
 </li>
       <li>Уведомление об успешном добавлении
-<img src="img/5. add task ready.PNG" alt="альтернативный текст">
+<img src="img/5. add task ready.PNG" alt="add task ready">
 </li>
       <li>Иконка в трее запущенного клиента
-<img src="img/6 tray.png" alt="альтернативный текст">
+<img src="img/6 tray.png" alt="tray">
 </li>
    </ul>
 
 2. Веб клиента
  <ul>
       <li>Главная
-<img src="img/7. web home.png." alt="web home">
+<img src="img/7. web home.png" alt="web home">
 </li>
       <li>Редактирование задачи
 <img src="img/8. web edit task.png" alt="web edit task">
